@@ -15,4 +15,12 @@ describe('String#title_case') do
     expect(("beowulf from brighton beach").title_case()).to(eq("Beowulf from Brighton Beach"))
   end
 
+  it("capitalizes designated words if they are the first word") do
+    expect(("from beowulf to the hulk").title_case()).to(eq("From Beowulf to the Hulk"))
+  end
+
+  it("handles non-letter numbers") do
+    expect(("57 beowulf alternative endings!!").title_case()).to(eq("57 Beowulf Alternative Endings!!"))
+  end
+
 end
