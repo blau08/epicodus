@@ -23,4 +23,15 @@ describe('String#title_case') do
     expect(("57 beowulf alternative endings!!").title_case()).to(eq("57 Beowulf Alternative Endings!!"))
   end
 
+  it("manages all uppercase entries") do
+    expect(("BEOWULF ON THE ROCKS").title_case()).to(eq("Beowulf on the Rocks"))
+  end
+
+  it("manages mixed case entries") do
+    expect(("BeoWulf aNd mE").title_case()).to(eq("Beowulf and Me"))
+  end
+  # 
+  # it("manages unique case entries") do
+  #   expect(("here's to beowulf and McDuff and O'Malley").title_case()).to(eq("Here's to Beowulf and McDuff and O'Malley"))
+  # end
 end
